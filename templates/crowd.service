@@ -1,0 +1,14 @@
+[Unit]
+Description=Atlassian Crowd
+After=network.target
+
+[Service]
+# Type=forking
+User=crowd
+Environment=CATALINA_OPTS="-Xmx1024m -Xms1024m -Datlassian.plugins.enable.wait=300" JAVA_HOME=/usr CATALINA_PID={{ crowd_install_dir }}/atlassian-crowd-{{ crowd_version }}/apache-tomcat/work/catalina.pid
+PIDFile={{ crowd_install_dir }}//atlassian-crowd-{{ crowd_version }}/apache-tomcat/work/catalina.pid
+ExecStart={{ crowd_install_dir }}/atlassian-crowd-{{ crowd_version }}/start_crowd.sh -fg
+# ExecStop={{ crowd_install_dir }}/atlassian-crowd-{{ crowd_version }}/stop_crowd.sh
+
+[Install]
+WantedBy=multi-user.target

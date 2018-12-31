@@ -1,0 +1,29 @@
+options:
+  crowd-version:
+    type: string
+    default: "3.2.6"
+    description: |
+      What version of Atlassian Crowd should be installed
+  server-id:
+    type: string
+    description: |
+      thing to install on the server, defaults to the automatically generated one
+    default:
+  license-key:
+    type: string
+    description: |
+      thing to install on the server
+    default:
+  # string-option:
+  #   type: string
+  #   default: "Default Value"
+  #   description: "A short description of the configuration option"
+  # boolean-option:
+  #   type: boolean
+  #   default: False
+  #   description: "A short description of the configuration option"
+  # int-option:
+  #   type: int
+  #   default: 9001
+  #   description: "A short description of the configuration option"
+

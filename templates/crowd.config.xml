@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<application-configuration>
+  <setupStep>installtype</setupStep>
+  <setupType>initial</setupType>
+  <buildNumber>0</buildNumber>
+  <properties>
+    {%- if server_id %}
+    <property name="crowd.server.id">{{ server_id }}</property>
+    {%- endif %}
+    <property name="license">{{ license_key }}</property>
+  </properties>
+</application-configuration>
